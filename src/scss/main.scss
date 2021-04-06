@@ -4,10 +4,35 @@
 @import "modules/hello.scss";
 
 body {
-  background: $wtf;
-  color: #fff;
+  background: skyblue;
+  color: orangered;
   display: flex;
+  flex-direction: column;
   align-items: center;
-  justify-content: center;
+  justify-content: flex-start;
   min-height: 100vh;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+h1{
+  margin-top: 16px;
+}
+
+label{
+  display: block;
+}
+
+.save {
+  background-color: springgreen;
+  color:darkgreen;
+}
+
+.load {
+  background-color:crimson;
+  color:darkred;
+}
+
+.text {
+  width: 600px;
+  height: 400px;
 }
