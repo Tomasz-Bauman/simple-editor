@@ -8,15 +8,8 @@ import '../scss/main.scss';
 
 console.log('HELLO 🚀')
 
-const historia =localStorage.getItem('historia');
-let result = '';
-
-if (historia) {
-    result = historia;
-}
-
 const text = document.querySelector('.text--js');
-text.value = result;
+text.value = text.innerHTML;
 
 const save = document.querySelector('.save--js');
 
@@ -24,9 +17,11 @@ save.addEventListener('click', () => {
     localStorage.setItem('historia',text.value);
 });
 
+console.log(localStorage.getItem('historia'));
 
-// localStorage.setItem('historia','');
+const load = document.querySelector('.load--js');
 
-// const load = document.querySelector('.load--js');
-
-// localStorage.getItem('historia');
+load.addEventListener('click', () => {
+    text.innerHTML=text.value
+    text.value = localStorage.getItem('historia');
+});
